@@ -1,0 +1,56 @@
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+123456789abcdef0123456789a
+
+00000409 - US
+00000419 - Russian
+
+a0000409 - 00c2 - United States (Dvorak) (International Extended)
+a0000418 - 00c0 - Romanian-Dvorak (CyberShadow)
+a0000419 - 00c3 - United States-Dvorak - Russian Phonetic
+a0010418 x 00c1 x Romanian-Dvorak (CyberShadow)
+
+szaRegImmHotKeys
+CONST TCHAR szRegImeHotKey[] = TEXT("Control Panel\\Input Method\\Hot Keys");
+CONST TCHAR szRegKeyboardPreload[] = TEXT("Keyboard Layout\\Preload");
+
+CONST TCHAR szRegVK[] = TEXT("Virtual Key");
+CONST TCHAR szRegMOD[] = TEXT("Key Modifiers");
+CONST TCHAR szRegHKL[] = TEXT("Target IME");
+
+#define IME_HOTKEY_DSWITCH_FIRST                0x100
+#define IME_HOTKEY_DSWITCH_LAST                 0x11F
+
+#define	MOD_ALT		0x0001
+#define	MOD_CONTROL	0x0002
+#define	MOD_SHIFT	0x0004
+#define	MOD_WIN		0x0008
+#define MOD_MODIFY_KEYS         (MOD_ALT|MOD_CONTROL|MOD_SHIFT|MOD_WIN)
+#define MOD_BOTH_SIDES          (MOD_LEFT|MOD_RIGHT)
+
+CliImmSetHotKeyWorker(dwID, uModifiers
+
+  dwID  iModifiers  hKL     uVKey
+Key name Key mod. Targ.IME Virt.Key
+00000101 0000c006 f0020409 00000031 1 Dvorak
+00000100 0000c006 04090409 00000032 2 QWERTY
+00000105 0000c006 f0c30419 00000033 3 Dvorak-Cyrillic
+         0000c006 f0c00418 
+00000102 0000c006 f0c20409 00000035 5 Dvorak-Intl
+00000103 0000c006 04190419 00000036 6 Cyrillic
+
+dwID = order of installed language
+
+
+The low word contains a Language Identifier for the input language and the 
+high word contains a device handle to the physical layout of the keyboard.
+
+1 Dvorak   y
+2 QWERTY   y
+3 DvorakRu y
+4 DvorakRo DVORAK
+5 DvorakIn õ
+6 Ru       y
+
+=================
+1. US only              100 - 04090409
+2. +Romanian-Dvorak     103 - f0c00418
