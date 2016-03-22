@@ -1,0 +1,38 @@
+partial alphanumeric_keys
+xkb_symbols "dvorak" {
+    include "us(dvorak)"
+
+    name[Group1]="Romanian (Dvorak)";
+
+    key <AE01> { [ 1,                 exclam,  dead_tilde		  ] };
+    key <AE02> { [ 2,                     at,  dead_caron		  ] };
+    key <AE03> { [ 3,             numbersign,  dead_circumflex 	  	  ] };
+    key <AE04> { [ 4,                 dollar,  dead_breve		  ] };
+    key <AE05> { [ 5,                percent,  dead_abovering		  ] };
+    key <AE06> { [ 6,            asciicircum,  dead_ogonek		  ] };
+    key <AE07> { [ 7,              ampersand,  dead_grave		  ] };
+    key <AE08> { [ 8,               asterisk,  dead_abovedot		  ] };
+    key <AE09> { [ 9,              parenleft,  dead_acute		  ] };
+    key <AE10> { [ 0,             parenright,  dead_doubleacute	  	  ] };
+    key <AC11> { [ minus,         underscore,  dead_diaeresis,     endash ] };
+    key <AD12> { [ equal,               plus,  dead_cedilla,    plusminus ] };
+    key <AB02> { [ q,                      Q,  acircumflex,   Acircumflex ] };
+    key <AD05> { [ y,                      Y,  acircumflex,   Acircumflex ] };
+    key <AB08> { [ w,                      W,  ssharp	 	          ] };
+    key <AC03> { [ e,                      E,  EuroSign  	          ] };
+    key <AC08> { [ t,                      T,  0x100021b,       0x100021a ] };
+    key <AC05> { [ i,                      I,  icircumflex,   Icircumflex ] };
+    key <AD04> { [ p,                      P,  section 			  ] };
+    key <AE11> { [ bracketleft,    braceleft,  doublelowquotemark 	  ] };
+    key <AE12> { [ bracketright,  braceright,  rightdoublequotemark 	  ] };
+    key <AC01> { [ a,                      A,  abreve,             Abreve ] };
+    key <AC10> { [ s,                      S,  0x1000219,       0x1000218 ] };
+    key <AC06> { [ d,                      D,  dstroke,  	  Dstroke ] };
+    key <AD10> { [ l,                      L,  lstroke,  	  Lstroke ] };
+//  key <BKSL> { [ backslash,            bar                              ] };
+    key <AD08> { [ c,                      C,  copyright 	       	  ] };
+    key <AD02> { [ comma, 	        less,  guillemotleft	          ] };
+    key <AD03> { [ period, 	     greater,  guillemotright 	          ] };
+
+    include "level3(ralt_switch)"
+};
