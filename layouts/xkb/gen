@@ -2,7 +2,7 @@
 set -eu
 
 function gen() {
-	sed "s/LAYOUT/$2/g" < my-template.xkb > layout-"$1".xkb
+	sed "s/LAYOUT/$2/g" < template-"$(hostname -s)".xkb > layout-"$1".xkb
 	xkbcomp -I. layout-"$1".xkb layout-"$1".xkm
 }
 
