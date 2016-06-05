@@ -2,6 +2,7 @@
 set -eu
 
 function gen() {
+	echo "============================= $1 ($2) ============================="
 	sed "s/LAYOUT/$2/g" < template-"$(hostname -s)".xkb > layout-"$1".xkb
 	xkbcomp -I. layout-"$1".xkb layout-"$1".xkm
 }
