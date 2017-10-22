@@ -10,5 +10,5 @@ function gen() {
 gen 1 'us(dvorak)'
 gen 2 'us'
 gen 3 'my_ru(dvorak)'
-gen 4 'my_ro(dvorak)'
+gen 5 'my_ro(dvorak)'
 gen 6 'ru'
