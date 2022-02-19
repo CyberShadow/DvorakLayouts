@@ -1,0 +1,7 @@
+xkb_keymap {
+	xkb_keycodes  { include "my_evdev_mix4+aliases(qwerty)"	};
+	xkb_types     { include "complete"	};
+	xkb_compat    { include "complete"	};
+	xkb_symbols   { include "pc+LAYOUT+inet(evdev)"	};
+	xkb_geometry  { include "pc(pc101)"	};
+};
