@@ -9,15 +9,17 @@ default xkb_keycodes "my_evdev" {
 	# <DELE> = 119; // -"- (as labeled)
 	<AC11> =  20;   // -_ as labeled
 	<AD12> =  21;   // =+ as labeled
-	<RTRN> =  66;   // Enter on Caps Lock
+	# <BKSP> =  22;   // Backspace on Backspace
+	<RTRN> =  47;   // Enter on ;:
 	<AC10> =  36;   // s on Enter
-	<AD11> =  47;   // /? on ;:
-	<BKSL> =  48;   // \| on '"
+	<AD11> =  66;   // /? on Caps Lock
+	<RTSH> =  48;   // Right Shift on '"
+	<BKSL> =  62;   // \| on Right Shift
 	<RALT> =  64;   // AltGr on Left Alt
 
 	// Complete the cycle (these keys aren't on the keyboard):
-	<CAPS> = 135;
-	<LALT> = 108;
+	<CAPS> = 135;   // Caps Lock on Menu key
+	<LALT> = 108;   // Left Alt on Right Alt
 
 
 	# minimum = 8;
