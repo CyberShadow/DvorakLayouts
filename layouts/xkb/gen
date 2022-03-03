@@ -2,9 +2,20 @@
 set -eu
 
 function gen() {
+	local n=$1
+	local layout=$2
 	echo "============================= $1 ($2) ============================="
-	sed "s/LAYOUT/$2/g" < template-"$(hostname -s)".xkb > layout-"$1".xkb
-	xkbcomp -I. layout-"$1".xkb layout-"$1".xkm
+	local template
+	template="$(hostname -s)"
+	if [[ "$template" == mix4 ]] ; then
+		if [[ "$layout" == *'(dvorak)' ]] ; then
+			template="$template"-dv
+		else
+			template="$template"-us
+		fi
+	fi
+	sed "s/LAYOUT/$layout/g" < template-"$template".xkb > layout-"$n".xkb
+	xkbcomp -I. layout-"$n".xkb layout-"$n".xkm
 }
 
 gen 1 'us(dvorak)'
