@@ -10,10 +10,10 @@ default xkb_keycodes "my_evdev" {
 	<AC11> =  20;   // -_ as labeled
 	<AD12> =  21;   // =+ as labeled
 	# <BKSP> =  22;   // Backspace on Backspace
-	<RTRN> =  47;   // Enter on ;:
+	<RTRN> =  48;   // Enter on '"
 	<AC10> =  36;   // s on Enter
 	<AD11> =  66;   // /? on Caps Lock
-	<RTSH> =  48;   // Right Shift on '"
+	<RTSH> =  47;   // Right Shift on ;:
 	<BKSL> =  62;   // \| on Right Shift
 	<RALT> =  64;   // AltGr on Left Alt
 
