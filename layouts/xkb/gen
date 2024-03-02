@@ -15,7 +15,11 @@ function gen() {
 		fi
 	fi
 	sed "s/LAYOUT/$layout/g" < template-"$template".xkb > layout-"$n".xkb
-	xkbcomp -I. layout-"$n".xkb layout-"$n".xkm
+	if command -v xkbcomp > /dev/null ; then
+		xkbcomp -I. layout-"$n".xkb layout-"$n".xkm
+	else
+		echo "xkbcomp not found, skipping layout compilation" >&2
+	fi
 }
 
 gen 1 'us(dvorak)'
